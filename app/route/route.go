@@ -21,10 +21,10 @@ type Position struct {
 }
 
 type PartialRoutePosition struct {
-	ID       string     `json:"routeId"`
-	ClientID string     `json:"clientId"`
-	Position []Position `json:"position"`
-	Finished bool       `json:"finished"`
+	ID       string    `json:"routeId"`
+	ClientID string    `json:"clientId"`
+	Position []float64 `json:"position"`
+	Finished bool      `json:"finished"`
 }
 
 func (r *Route) LoadPositions() error {
